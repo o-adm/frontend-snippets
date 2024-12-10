@@ -1,0 +1,117 @@
+.hero {
+  margin-top: -7rem;
+  background: #000 url("../img/curved-bg.png") 0 100% / 100% 60% no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  z-index: -10;
+
+  &__container {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+
+    @media only screen and(max-width: 600px) {
+      padding-top: 20rem;
+      padding-inline: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: gainsboro;
+  }
+
+  &__btns {
+    margin-top: 2rem;
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.slider-section {
+  width: 60%;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  max-width: 44.7rem;
+  margin-inline: auto;
+  display: flex;
+  overflow: hidden;
+
+  &__images {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    // animation: blur 0.2s ease-in-out;
+
+    img {
+      width: 100%;
+      height: auto;
+      transform: rotate(327deg);
+      flex-shrink: 0;
+    }
+  }
+
+  &__next,
+  &__prev {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+}
+
+.active {
+  background-color: greenyellow;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(30px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hero &mdash; Slider</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a class="header__logo">
+        <img src="img/logo.png" alt="Shopify Logo" />
+      </a>
+      <!-- Hamburger Button -->
+      <button
+        class="header__hamburger"
+        id="menu-icon"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+      >
+        <span class="hamburger__line">&nbsp;</span>
+      </button>
+      <nav class="header__nav" aria-label="Main Site Navigation">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Course</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__btns">
+        <a href="#" class="btn btn--login">Login</a>
+        <a href="#" class="btn btn--sign-up">Sign up</a>
+      </div>
+    </header>
+
+    <main aria-label="Main Site">
+      <section class="hero">
+        <div class="hero__container">
+          <h1 class="hero__title">Step Up Your Style - Sneakers That Speak!</h1>
+          <p class="hero__description">
+            Explore top-notch sneakers blending style, comfort, and quality for
+            every step ahead!
+          </p>
+          <div class="hero__btns">
+            <a href="#" class="btn btn--login">Open Store</a>
+            <a href="#" class="btn btn--sign-up">Explore Now</a>
+          </div>
+        </div>
+      </section>
+      <section class="slider-section">
+        <div class="slider">
+          <div class="slider__images">
+            <img src="/img/product-1.png" alt="Product 1" />
+            <img src="/img/product-2.png" alt="Product 2" />
+            <img src="/img/product-3.png" alt="Product 3" />
+            <img src="/img/product-4.png" alt="Product 4" />
+          </div>
+          <div class="slider__prev">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div class="slider__next">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+
+          <div class="slider__dots">
+            <div class="slider__dot" data-index="0"></div>
+            <div class="slider__dot" data-index="1"></div>
+            <div class="slider__dot" data-index="2"></div>
+            <div class="slider__dot" data-index="3"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@mixin btn($color, $background, $border: none) {
+  background-color: $background;
+  color: $color;
+  border: $border;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 1rem 2.5rem;
+  flex-shrink: 0;
+
+  &--login {
+    font-weight: 600;
+    @include btn(#000, greenyellow);
+  }
+
+  &--sign-up {
+    @include btn(greenyellow, null, 2px solid greenyellow);
+  }
+}
